@@ -114,7 +114,7 @@
                 <img src="assets/img/phone.png" class="img-responsive main-img" data-scroll-reveal="enter from the left after 0.1s" />
             </div>
             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                <h1 data-scroll-reveal="enter from the right after 0.1s"><strong>TechGrouth||Home </strong></h1>
+                <h1 data-scroll-reveal="enter from the right after 0.1s"><strong>TechGrowth||Home </strong></h1>
                 <p><strong><font color="skyblue" size="5">Yeah we code some pretty cool stuff.  Watch out! Some are hot  too....</font></em></strong></p>
                 <p data-scroll-reveal="enter from the bottom after 0.2s">                   
                  At Tech Growth we not only build technology, but we Play technology. We help others grow with us. Way more than just a bunch of developers, we are quite dedicated to provide people with quality technology solutions that can only make life easier.
@@ -449,11 +449,50 @@ TechGrowth is a website development company which focuses on enhancing the users
             <div class="form">
       
       <ul class="tab-group">
-        <li class="tab "><a href="#signup">Register</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
+          <li class="tab"><a href="#login">Log In</a></li>
+          <li class="tab "><a href="#signup">Register</a></li>
       </ul>
       <div class="tab-content">
-        <div id="signup">
+         <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="Login_TechZizz" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="email" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" name="password" required autocomplete="off"/>
+          </div>
+              <%
+                
+               
+                if(null!=session.getAttribute("loginerror"))
+                {
+                    String msg=session.getAttribute("loginerror").toString();
+              %>
+                    <p class="invalid-login"><%=msg%></p>
+              <%
+                }
+              %>
+          
+         
+         
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button type="submit" class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+                <div id="signup">
           <h1>Register</h1>
           
           <form action= "Register_TechZizz" method="post">
@@ -493,46 +532,7 @@ TechGrowth is a website development company which focuses on enhancing the users
           </form>
 
         </div>
-        
-        <div id="login">   
-          <h1>Welcome Back!</h1>
-          
-          <form action="Login_TechZizz" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" name="email" required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" name="password" required autocomplete="off"/>
-          </div>
-              <%
-                
-               
-                if(null!=session.getAttribute("loginerror"))
-                {
-                    String msg=session.getAttribute("loginerror").toString();
-              %>
-                    <p class="invalid-login"><%=msg%></p>
-              <%
-                }
-              %>
-          
-         
-         
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button type="submit" class="button button-block"/>Log In</button>
-          
-          </form>
-
-        </div>
+      
         
       </div><!-- tab-content -->
       

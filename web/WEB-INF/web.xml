@@ -12,6 +12,7 @@
         <servlet-name>CompleteRegistration</servlet-name>
         <servlet-class>CompleteRegistration</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>Register_TechZizz</servlet-name>
         <url-pattern>/Register_TechZizz</url-pattern>
@@ -20,10 +21,15 @@
         <servlet-name>Login_TechZizz</servlet-name>
         <url-pattern>/Login_TechZizz</url-pattern>
     </servlet-mapping>
+    
+    
+    
     <servlet-mapping>
         <servlet-name>CompleteRegistration</servlet-name>
         <url-pattern>/CompleteRegistration</url-pattern>
     </servlet-mapping>
+    
+    
     <session-config>
         <session-timeout>
             30

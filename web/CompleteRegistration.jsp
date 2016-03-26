@@ -19,12 +19,7 @@
         <title>TechGrowth|TechZizz|Complete Registration</title>
     </head>
     <body>
-        <%
-            String lang=session.getAttribute("lang").toString();
-            if(lang.equals("NONE")) 
-            {
-        %>
-      
+          
             <div class="container">
 		<div class="top">
 			<h1 id="title" class="hidden"><span id="logo">almost <span>there..</span></span></h1>
@@ -70,10 +65,6 @@
 	</div>
             
      
-        <%
-            }
-        %>   
-        
         
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
  
